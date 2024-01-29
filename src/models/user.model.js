@@ -51,7 +51,9 @@ const userSchema = new Schema(
     }
 );
 
+//pre hook in this case working of save event
 userSchema.pre("save", async function (next) {
+    // if password in not modified go to next step
     if (!this.isModified("password")) return next();
 
     this.password = await bcrypt.hash(this.password, 10);   // password, rounds
@@ -65,10 +67,10 @@ userSchema.methods.isPasswordCorrect = async function (password) {
 userSchema.methods.generateAccessToken = function () {
     return jwt.sign(
         {
-        _id: this._id,
-        email: this.email,
-        username: this.username,
-        fullName: this.fullName,
+            _id: this._id,
+            email: this.email,
+            username: this.username,
+            fullName: this.fullName,
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
