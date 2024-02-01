@@ -2,6 +2,8 @@
 
 Videotube is a complex backend project built with Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt, and more. It serves as the backbone for a video hosting website similar to YouTube, equipped with features like user authentication, video upload, like/dislike, comments, subscriptions, and more.
 
+The Videotube project includes a powerful aggregation pipeline designed to extract relevant information from the MongoDB database. This pipeline is crafted to efficiently process and transform data, providing valuable insights for various functionalities within the video hosting platform.
+
 ## Technologies Used
 
 - Node.js
@@ -33,9 +35,17 @@ Videotube is a complex backend project built with Node.js, Express.js, MongoDB, 
 
 3. **Set up the environment variables:**
 
-    PORT=3000
-    MONGODB_URI=mongodb://localhost:27017/videotube
-    JWT_SECRET=your_jwt_secret
+    PORT=
+    MONGODB_URI=
+    CORS_ORIGIN=*
+    ACCESS_TOKEN_SECRET=
+    ACCESS_TOKEN_EXPIRY=1d
+    REFRESH_TOKEN_SECRET=
+    REFRESH_TOKEN_EXPIRY=10d
+
+    CLOUDINARY_CLOUD_NAME=
+    CLOUDINARY_API_KEY=
+    CLOUDINARY_API_SECRET=
 
 3. **Run the application:**
 
