@@ -15,41 +15,78 @@ The Videotube project includes a powerful aggregation pipeline designed to extra
 
 ## Features
 
-- **User Authentication:** Sign up and log in securely using JWT for token-based authentication.
-- **Video Management:** Upload videos to the platform.
-- **User Interaction:** Like, dislike, comment on videos.
-- **Comment:** Engage in discussions with the ability to comments.
-- **Subscriptions:** Subscribe and unsubscribe to channels for personalized content updates.
+### User Management:
 
-## Installation
+- Registration, login, logout, password reset
+- Profile management (avatar, cover image, details)
+- Watch history tracking
+
+### Video Management:
+
+- Video upload and publishing
+- Video search, sorting, and pagination
+- Video editing and deletion
+- Visibility control (publish/unpublish)
+
+### Tweet Management:
+
+- Tweet creation and publishing
+- Viewing user tweets
+- Updating and deleting tweets
+
+### Subscription Management:
+
+- Subscribing to channels
+- Viewing subscriber and subscribed channel lists
+
+### Playlist Management:
+
+- Creating, updating, and deleting playlists
+- Adding and removing videos from playlists
+- Viewing user playlists
+
+### Like Management:
+
+- Liking and unliking videos, comments, and tweets
+- Viewing liked videos
+
+### Comment Management:
+
+- Adding, updating, and deleting comments on videos
+
+### Dashboard:
+
+- Viewing channel statistics (views, subscribers, videos, likes)
+- Accessing uploaded videos
+
+### Health Check:
+
+- Endpoint to verify the backend's health
+
+## Installation and Setup
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/your-username/Videotube.git
-   cd Videotube
+    ```bash
+    git clone https://github.com/Hruthik-28/youtube-twitter.git
+    ```
 
 2. **Install dependencies:**
 
+    ```bash
+    cd youtube-twitter
     npm install
+    ```
 
-3. **Set up the environment variables:**
+3. **Set up environment variables:**
+    Create a .env in root of project and fill in the required values in the .env file using .env.sample file
 
-    PORT=
-    MONGODB_URI=
-    CORS_ORIGIN=*
-    ACCESS_TOKEN_SECRET=
-    ACCESS_TOKEN_EXPIRY=1d
-    REFRESH_TOKEN_SECRET=
-    REFRESH_TOKEN_EXPIRY=10d
+4. **Start the server:**
 
-    CLOUDINARY_CLOUD_NAME=
-    CLOUDINARY_API_KEY=
-    CLOUDINARY_API_SECRET=
-
-3. **Run the application:**
-
+    ```bash
     npm run dev
+    ```
 
+## Contributing
 
-The server will be running at http://localhost:{PORT}.
+If you wish to contribute to this project, please feel free to contribute.
