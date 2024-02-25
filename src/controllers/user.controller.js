@@ -160,12 +160,12 @@ const logoutUser = asyncHandler(async(req, res) => {
             }
         },
         {
-            new: true
+            new: true    // modified document will be returned
         }
     )
 
     const options = {
-        httpOnly: true,
+        httpOnly: true,        // so that cookies are modifiable only through server
         secure: true
     }
 
